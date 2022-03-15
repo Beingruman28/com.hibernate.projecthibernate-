@@ -8,13 +8,21 @@ import javax.persistence.Table;
 @Entity
 @Table(name="users")
 public class Users {
-	public Users(String user_fname, String user_lname, String user_email) {
-		super();
+	
+	
+	public Users() {
+		
+	}
+
+
+	public Users(int user_id, String user_fname, String user_lname, String user_email) {
+		this.user_id = user_id;
 		this.user_fname = user_fname;
 		this.user_lname = user_lname;
 		this.user_email = user_email;
 	}
 
+	
 	@Id
 	@Column(name="user_id")
 	int user_id;
