@@ -29,7 +29,10 @@ public class App {
 			user = session.get(Users.class,6);
 			
 			//Updating object
-			user.setUser_lname("ruman");
+			//user.setUser_lname("ruman");
+			
+			//deleting object
+			session.delete(user);
 			//commit the transaction 
 			session.getTransaction().commit();
 			System.out.println(user);
